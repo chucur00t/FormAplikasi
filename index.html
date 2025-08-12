@@ -64,30 +64,36 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="appName" class="block text-sm font-medium text-slate-700">Nama Aplikasi</label>
-                        <input type="text" id="appName" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <input type="text" id="appName" name="appName" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                     </div>
                     <div>
                         <label for="appId" class="block text-sm font-medium text-slate-700">ID/Kode Aplikasi</label>
-                        <input type="text" id="appId" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <div class="mt-1 flex rounded-md shadow-sm">
+                            <input type="text" id="appId" name="appId" class="block w-full px-3 py-2 bg-slate-100 border border-slate-300 rounded-l-md sm:text-sm transition cursor-not-allowed" readonly placeholder="Klik Generate ->">
+                            <button type="button" id="generateIdBtn" class="inline-flex items-center px-4 py-2 border border-l-0 border-slate-300 bg-slate-50 rounded-r-md text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 transition">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <span class="ml-2 hidden sm:inline">Generate</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="md:col-span-2">
                         <label for="appDesc" class="block text-sm font-medium text-slate-700">Deskripsi Singkat Fungsi Aplikasi</label>
-                        <textarea id="appDesc" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition"></textarea>
+                        <textarea id="appDesc" name="appDesc" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition"></textarea>
                     </div>
                      <div>
                         <label for="appType" class="block text-sm font-medium text-slate-700">Jenis Aplikasi</label>
-                        <select id="appType" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="appType" name="appType" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>Aplikasi Umum</option>
                             <option>Aplikasi Khusus</option>
                         </select>
                     </div>
                      <div>
                         <label for="releaseYear" class="block text-sm font-medium text-slate-700">Tahun Rilis / Pengembangan</label>
-                        <input type="number" id="releaseYear" placeholder="YYYY" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <input type="number" id="releaseYear" name="releaseYear" placeholder="YYYY" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                     </div>
                     <div>
                         <label for="operationalStatus" class="block text-sm font-medium text-slate-700">Status Operasional</label>
-                        <select id="operationalStatus" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="operationalStatus" name="operationalStatus" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>Aktif / Produksi</option>
                             <option>Dalam Pengembangan</option>
                             <option>Tahap Nonaktif (Phase Out)</option>
@@ -96,7 +102,7 @@
                     </div>
                     <div>
                         <label for="accessUrl" class="block text-sm font-medium text-slate-700">URL / Alamat Akses</label>
-                        <input type="url" id="accessUrl" placeholder="https://..." class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <input type="url" id="accessUrl" name="accessUrl" placeholder="https://..." class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                     </div>
                 </div>
             </fieldset>
@@ -107,11 +113,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                      <div>
                         <label for="unitKerja" class="block text-sm font-medium text-slate-700">Unit Kerja Pengelola</label>
-                        <input type="text" id="unitKerja" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <input type="text" id="unitKerja" name="unitKerja" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                     </div>
                     <div>
                         <label for="picName" class="block text-sm font-medium text-slate-700">Nama Penanggung Jawab (PIC)</label>
-                        <input type="text" id="picName" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <input type="text" id="picName" name="picName" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                     </div>
                 </div>
             </fieldset>
@@ -122,7 +128,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="platform" class="block text-sm font-medium text-slate-700">Platform</label>
-                        <select id="platform" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="platform" name="platform" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>Web-Based</option>
                             <option>Mobile - Android</option>
                             <option>Mobile - iOS</option>
@@ -131,15 +137,15 @@
                     </div>
                     <div>
                         <label for="language" class="block text-sm font-medium text-slate-700">Bahasa Pemrograman & Framework</label>
-                        <input type="text" id="language" placeholder="Contoh: PHP/Laravel" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <input type="text" id="language" name="language" placeholder="Contoh: PHP/Laravel" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                     </div>
                      <div>
                         <label for="database" class="block text-sm font-medium text-slate-700">Database</label>
-                        <input type="text" id="database" placeholder="Contoh: PostgreSQL 14" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <input type="text" id="database" name="database" placeholder="Contoh: PostgreSQL 14" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                     </div>
                     <div>
                         <label for="serverLocation" class="block text-sm font-medium text-slate-700">Lokasi Infrastruktur (Server)</label>
-                        <select id="serverLocation" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="serverLocation" name="serverLocation" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>Pusat Data Nasional (PDN)</option>
                             <option>Pusat Data Instansi</option>
                             <option>Cloud Komersial</option>
@@ -167,18 +173,18 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="md:col-span-2">
                         <label for="businessProcess" class="block text-sm font-medium text-slate-700">Proses Bisnis Utama yang Dilayani</label>
-                        <input type="text" id="businessProcess" placeholder="Contoh: Pengelolaan Kepegawaian" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <input type="text" id="businessProcess" name="businessProcess" placeholder="Contoh: Pengelolaan Kepegawaian" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                     </div>
                     <div>
                         <label for="serviceClassification" class="block text-sm font-medium text-slate-700">Klasifikasi Layanan</label>
-                        <select id="serviceClassification" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="serviceClassification" name="serviceClassification" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>Layanan Administrasi Pemerintahan</option>
                             <option>Layanan Publik</option>
                         </select>
                     </div>
                     <div>
                         <label for="userTarget" class="block text-sm font-medium text-slate-700">Target Pengguna</label>
-                        <select id="userTarget" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="userTarget" name="userTarget" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>Internal / ASN</option>
                             <option>Masyarakat Umum</option>
                             <option>Pelaku Usaha</option>
@@ -194,7 +200,7 @@
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="securityClassification" class="block text-sm font-medium text-slate-700">Klasifikasi Keamanan Aplikasi</label>
-                        <select id="securityClassification" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="securityClassification" name="securityClassification" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>Rendah</option>
                             <option>Sedang</option>
                             <option>Tinggi</option>
@@ -203,7 +209,7 @@
                     </div>
                     <div>
                         <label for="dataClassification" class="block text-sm font-medium text-slate-700">Klasifikasi Data yang Dikelola</label>
-                        <select id="dataClassification" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="dataClassification" name="dataClassification" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>Data Terbuka</option>
                             <option>Data Terbatas</option>
                             <option>Data Rahasia</option>
@@ -268,7 +274,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="budgetSource" class="block text-sm font-medium text-slate-700">Sumber Anggaran</label>
-                        <select id="budgetSource" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="budgetSource" name="budgetSource" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>APBN</option>
                             <option>APBD</option>
                             <option>Lainnya</option>
@@ -276,7 +282,7 @@
                     </div>
                     <div>
                         <label for="licenseType" class="block text-sm font-medium text-slate-700">Jenis Lisensi Aplikasi</label>
-                        <select id="licenseType" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                        <select id="licenseType" name="licenseType" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
                             <option>Open Source</option>
                             <option>Proprietary / Komersial</option>
                             <option>Lisensi Pemerintah</option>
@@ -295,6 +301,29 @@
         </form>
 
     </div>
+
+    <script>
+        // Function to generate a unique application ID
+        function generateAppId() {
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            
+            // Generate a random 6-character alphanumeric string
+            const randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let randomPart = '';
+            for (let i = 0; i < 6; i++) {
+                randomPart += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+            }
+            
+            const newId = `APP-${year}${month}${day}-${randomPart}`;
+            document.getElementById('appId').value = newId;
+        }
+
+        // Add event listener to the generate button
+        document.getElementById('generateIdBtn').addEventListener('click', generateAppId);
+    </script>
 
 </body>
 </html>
