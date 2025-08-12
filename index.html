@@ -268,9 +268,47 @@
                 </div>
             </fieldset>
 
-            <!-- Section 7: Anggaran & Lisensi -->
+            <!-- Section 7: Legalitas & Status Formal -->
             <fieldset>
-                <legend class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3"><i class="fa-solid fa-file-invoice-dollar text-teal-500"></i>7. Anggaran & Lisensi</legend>
+                <legend class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3"><i class="fa-solid fa-gavel text-purple-500"></i>7. Legalitas & Status Formal</legend>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">Pendaftaran PSE Kominfo</label>
+                        <select id="pseStatus" name="pseStatus" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                            <option>Terdaftar</option>
+                            <option>Belum Terdaftar</option>
+                            <option>Tidak Wajib</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pseNumber" class="block text-sm font-medium text-slate-700">Nomor Tanda Daftar PSE</label>
+                        <input type="text" id="pseNumber" name="pseNumber" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">Pendaftaran HAKI (Hak Cipta)</label>
+                         <select id="hakiStatus" name="hakiStatus" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                            <option>Terdaftar</option>
+                            <option>Belum Terdaftar</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="hakiNumber" class="block text-sm font-medium text-slate-700">Nomor Sertifikat HAKI</label>
+                        <input type="text" id="hakiNumber" name="hakiNumber" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                    </div>
+                    <div>
+                        <label for="skNumber" class="block text-sm font-medium text-slate-700">SK Penetapan Aplikasi</label>
+                        <input type="text" id="skNumber" name="skNumber" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                    </div>
+                     <div>
+                        <label for="skDate" class="block text-sm font-medium text-slate-700">Tanggal SK Penetapan</glabel>
+                        <input type="date" id="skDate" name="skDate" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Section 8: Anggaran & Lisensi -->
+            <fieldset>
+                <legend class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3"><i class="fa-solid fa-file-invoice-dollar text-teal-500"></i>8. Anggaran & Lisensi</legend>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="budgetSource" class="block text-sm font-medium text-slate-700">Sumber Anggaran</label>
